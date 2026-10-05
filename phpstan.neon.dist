@@ -1,0 +1,10 @@
+# Uruchomienie bez dodawania zależności:
+# docker run --rm -u 1000:1000 -v "$PWD":/app -w /app ghcr.io/phpstan/phpstan:1-php8.3 analyse
+parameters:
+    level: 8
+    paths:
+        - src/Product
+        - tests/Unit/Product
+        - tests/Functional/Product
+    bootstrapFiles:
+        - vendor/autoload.php

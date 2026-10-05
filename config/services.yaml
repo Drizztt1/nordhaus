@@ -59,6 +59,14 @@ services:
         resource: '../src/Command/*'
         tags: [ 'console.command' ]
 
+    #
+    # REGUŁY PRODUKTÓW (SKU, dostępność, klucz URL)
+    #
+
+    # subscribery zdarzeń i komendy są tagowane przez autoconfigure
+    App\Product\:
+        resource: '../src/Product/*'
+
 
 
     # Example custom templating helper

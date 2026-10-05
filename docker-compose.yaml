@@ -95,6 +95,8 @@ services:
                 condition: service_healthy
         volumes:
             - pimcore-test-var:/var/www/html/var
+            # definicje klas z repo (np. Product) muszą być widoczne mimo osobnego wolumenu var/
+            - ./var/classes:/var/www/html/var/classes
             - pimcore-test-public-var:/var/www/html/public/var
 
 volumes:

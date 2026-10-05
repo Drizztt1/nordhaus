@@ -1,0 +1,270 @@
+pimcore:
+    objects:
+        custom_layouts:
+            definitions:
+                product_parent:
+                    id: product_parent
+                    name: 'Product – parent'
+                    description: 'Produkt nadrzędny: bez pól tylko dla wariantów (stock, fabric, leg).'
+                    creationDate: 1791228210
+                    modificationDate: 1791228210
+                    classId: product
+                    layoutDefinitions:
+                        name: pimcore_root
+                        type: null
+                        region: null
+                        title: null
+                        width: 0
+                        height: 0
+                        collapsible: false
+                        collapsed: false
+                        bodyStyle: null
+                        datatype: layout
+                        children:
+                            -
+                                name: Layout
+                                type: null
+                                region: null
+                                title: null
+                                width: 0
+                                height: 0
+                                collapsible: false
+                                collapsed: false
+                                bodyStyle: null
+                                datatype: layout
+                                children:
+                                    -
+                                        name: General
+                                        type: null
+                                        region: null
+                                        title: General
+                                        width: 0
+                                        height: 0
+                                        collapsible: false
+                                        collapsed: false
+                                        bodyStyle: null
+                                        datatype: layout
+                                        children:
+                                            -
+                                                name: sku
+                                                title: SKU
+                                                tooltip: 'Normalised to trimmed uppercase on save. Must be unique across all products and variants.'
+                                                mandatory: true
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: null
+                                                permissions: null
+                                                fieldtype: input
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: true
+                                                visibleSearch: true
+                                                defaultValue: null
+                                                columnLength: 64
+                                                regex: ''
+                                                regexFlags: {  }
+                                                unique: true
+                                                showCharCount: false
+                                                width: null
+                                                defaultValueGenerator: ''
+                                                datatype: data
+                                            -
+                                                name: localizedfields
+                                                title: null
+                                                tooltip: null
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: null
+                                                permissions: null
+                                                fieldtype: localizedfields
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: true
+                                                visibleSearch: true
+                                                children:
+                                                    -
+                                                        name: name
+                                                        title: Name
+                                                        tooltip: null
+                                                        mandatory: false
+                                                        noteditable: false
+                                                        index: false
+                                                        locked: false
+                                                        style: null
+                                                        permissions: null
+                                                        fieldtype: input
+                                                        relationType: false
+                                                        invisible: false
+                                                        visibleGridView: true
+                                                        visibleSearch: true
+                                                        defaultValue: null
+                                                        columnLength: 190
+                                                        regex: ''
+                                                        regexFlags: {  }
+                                                        unique: false
+                                                        showCharCount: false
+                                                        width: null
+                                                        defaultValueGenerator: ''
+                                                        datatype: data
+                                                    -
+                                                        name: urlKey
+                                                        title: 'URL key'
+                                                        tooltip: 'Generated from name when empty. Frozen once the product has been published; can still be edited manually.'
+                                                        mandatory: false
+                                                        noteditable: false
+                                                        index: false
+                                                        locked: false
+                                                        style: null
+                                                        permissions: null
+                                                        fieldtype: input
+                                                        relationType: false
+                                                        invisible: false
+                                                        visibleGridView: true
+                                                        visibleSearch: true
+                                                        defaultValue: null
+                                                        columnLength: 190
+                                                        regex: ''
+                                                        regexFlags: {  }
+                                                        unique: false
+                                                        showCharCount: false
+                                                        width: null
+                                                        defaultValueGenerator: ''
+                                                        datatype: data
+                                                    -
+                                                        name: urlKeyAuto
+                                                        title: 'Last auto-generated URL key (internal)'
+                                                        tooltip: null
+                                                        mandatory: false
+                                                        noteditable: true
+                                                        index: false
+                                                        locked: false
+                                                        style: null
+                                                        permissions: null
+                                                        fieldtype: input
+                                                        relationType: false
+                                                        invisible: true
+                                                        visibleGridView: true
+                                                        visibleSearch: true
+                                                        defaultValue: null
+                                                        columnLength: 190
+                                                        regex: ''
+                                                        regexFlags: {  }
+                                                        unique: false
+                                                        showCharCount: false
+                                                        width: null
+                                                        defaultValueGenerator: ''
+                                                        datatype: data
+                                                    -
+                                                        name: description
+                                                        title: Description
+                                                        tooltip: null
+                                                        mandatory: false
+                                                        noteditable: false
+                                                        index: false
+                                                        locked: false
+                                                        style: null
+                                                        permissions: null
+                                                        fieldtype: wysiwyg
+                                                        relationType: false
+                                                        invisible: false
+                                                        visibleGridView: true
+                                                        visibleSearch: true
+                                                        toolbarConfig: ''
+                                                        excludeFromSearchIndex: false
+                                                        maxCharacters: 0
+                                                        height: null
+                                                        width: null
+                                                        datatype: data
+                                                region: null
+                                                layout: null
+                                                maxTabs: null
+                                                border: false
+                                                provideSplitView: false
+                                                tabPosition: top
+                                                hideLabelsWhenTabsReached: null
+                                                permissionView: null
+                                                permissionEdit: null
+                                                labelWidth: 100
+                                                labelAlign: left
+                                                width: null
+                                                height: null
+                                                datatype: data
+                                            -
+                                                name: price
+                                                title: 'Price (EUR, net)'
+                                                tooltip: null
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: null
+                                                permissions: null
+                                                fieldtype: numeric
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: true
+                                                visibleSearch: true
+                                                defaultValue: null
+                                                integer: false
+                                                unsigned: false
+                                                minValue: 0
+                                                maxValue: null
+                                                unique: false
+                                                decimalSize: null
+                                                decimalPrecision: 2
+                                                width: null
+                                                defaultValueGenerator: ''
+                                                datatype: data
+                                            -
+                                                name: availability
+                                                title: Availability
+                                                tooltip: 'Calculated automatically (variant: stock > 0; parent: any published variant in stock).'
+                                                mandatory: false
+                                                noteditable: true
+                                                index: true
+                                                locked: false
+                                                style: null
+                                                permissions: null
+                                                fieldtype: select
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: true
+                                                visibleSearch: true
+                                                options:
+                                                    -
+                                                        key: 'In stock'
+                                                        value: in_stock
+                                                    -
+                                                        key: 'Out of stock'
+                                                        value: out_of_stock
+                                                defaultValue: null
+                                                columnLength: 16
+                                                dynamicOptions: false
+                                                defaultValueGenerator: ''
+                                                width: null
+                                                optionsProviderType: null
+                                                optionsProviderClass: null
+                                                optionsProviderData: null
+                                                datatype: data
+                                        locked: false
+                                        fieldtype: panel
+                                        layout: null
+                                        border: false
+                                        icon: null
+                                        labelWidth: 100
+                                        labelAlign: left
+                                locked: false
+                                fieldtype: tabpanel
+                                border: false
+                                tabPosition: top
+                        locked: false
+                        fieldtype: panel
+                        layout: null
+                        border: false
+                        icon: null
+                        labelWidth: 100
+                        labelAlign: left
+                    default: 0

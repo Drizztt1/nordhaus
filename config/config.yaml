@@ -3,6 +3,15 @@ imports:
 
 
 pimcore:
+    general:
+        valid_languages: [en, pl]
+    # Custom layouty jako pliki w repo (wersjonowane, bez importu); zmiany z GUI zapisują się do tych plików.
+    config_location:
+        object_custom_layouts:
+            write_target:
+                type: 'symfony-config'
+                options:
+                    directory: '%kernel.project_dir%/config/pimcore/custom-layouts'
 
 # IMPORTANT Notice!
 # Following there are only some examples listed, for a full list of possible options, please run the following command:

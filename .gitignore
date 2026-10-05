@@ -47,3 +47,8 @@ nbproject
 
 # temp
 .temp
+
+# cache Composera (COMPOSER_HOME=/var/www/html w kontenerach Docker)
+/cache/
+# przykładowy klucz Google ze skeletonu (GitHub push protection traktuje go jak sekret)
+/config/pimcore/google-api-private-key.json.example
